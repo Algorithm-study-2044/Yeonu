@@ -18,8 +18,8 @@ class Solution(object):
         # high보다 크면 왼쪽에 있는 값만 더하기
         if root.val > high:
         	return self.rangeSumBST(root.left, low, high)
-		# low보다 작으면 오른쪽에 있는 값만 더하기
-		if root.val < low:
+        # low보다 작으면 오른쪽에 있는 값만 더하기
+        if root.val < low:
             return self.rangeSumBST(root.right, low, high)
         # low와 high 사이에 있으면 왼쪽, 오른쪽 모두 검사
         return root.val + self.rangeSumBST(root.left, low, high) + self.rangeSumBST(root.right, low, high)
